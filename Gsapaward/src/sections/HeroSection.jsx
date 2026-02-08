@@ -46,7 +46,7 @@ useGSAP(() => {
   return (
     <section className=" bg-main-bg" >
        <div className="hero-container ">
-        <img className="absolute bottom-0 left-1/2 -translate-x-1/2 object-auto scale-100 md:scale-150 "     src="public/images/static-img.png" alt="hero-img" />
+        <img className="absolute bottom-0 left-1/2 -translate-x-1/2 object-auto scale-100 md:scale-150 "     src="/images/static-img.png" alt="hero-img" />
 
         <div className="hero-content opacity-0" >
             <div className="overflow-hidden" >
