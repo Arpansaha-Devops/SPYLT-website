@@ -95,6 +95,9 @@ body::-webkit-scrollbar {
     }
   }
 
+
+  /* message section -- */
+
   .message-content {
     @apply bg-[#7f3b2d] text-milk min-h-dvh overflow-hidden flex justify-center items-center relative z-20;
 
