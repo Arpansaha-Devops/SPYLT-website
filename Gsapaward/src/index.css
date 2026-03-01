@@ -173,7 +173,7 @@ body::-webkit-scrollbar {
     @apply min-h-dvh 2xl:h-[120dvh] overflow-hidden relative;
 
     .big-img {
-      @apply w-full absolute 2xl:h-full md:h-2/3 h-1/2 left-0 bottom-0 object-bottom 2xl:object-contain object-cover;
+      @apply w-full absolute left-0 bottom-0 2xl:h-full md:h-[70%] h-[55vh] max-h-full object-contain object-bottom;
     }
 
     .nutrition-title {

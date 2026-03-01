@@ -19,7 +19,7 @@ useGSAP(() => {
         scrollTrigger : {
             trigger : ".flavor-section",
             start : "top 30%",
-            markers : true,
+            // markers : true,
         },
     })
     gsap.to(".flavor-text-scroll", {
@@ -28,7 +28,7 @@ useGSAP(() => {
         scrollTrigger : {
             trigger : ".flavor-section",
             start : "top 10%",
-            markers : true
+            // markers : true
         }
     })
 

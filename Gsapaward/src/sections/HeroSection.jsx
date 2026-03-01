@@ -32,7 +32,7 @@ useGSAP(() => {
             start : "1% top",
             end : "bottom top",
             scrub : true,
-            markers : true // see the Start point & end point 
+            // markers : true // see the Start point & end point 
         }
     })
     heroTl.to(".hero-container", {
