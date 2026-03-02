@@ -2,6 +2,7 @@
 import { useGSAP } from '@gsap/react'
 import ClipPathTitle from '../componenets/ClipPathTitle'
 import gsap from 'gsap'
+import VideoPinSection from '../componenets/VideoPinSection'
 
 const BenefitSection = () => {
 useGSAP(() => {
@@ -11,7 +12,7 @@ useGSAP(() => {
             trigger : ".benefit-section",
             start : "top 60%",
             end : "top top",
-            scrub : 1,
+            scrub : 1.5,
             // pin : true
         }
     })
@@ -60,6 +61,10 @@ useGSAP(() => {
 </div>
 
     </div>
+</div>
+
+<div className='relative overlay-box'>
+    <VideoPinSection />
 </div>
 
 </section>
