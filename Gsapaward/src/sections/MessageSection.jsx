@@ -1,9 +1,16 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
+import { useMediaQuery } from "react-responsive";
 
 const MessageSection = () => {
+  const isMobile = useMediaQuery({
+    query: "(max-width: 768px)",
+  });
+
   useGSAP(() => {
+    if (isMobile) return;
+    
     const firstMsgSplit = SplitText.create(".first-message", {
       type: "words",
     });
