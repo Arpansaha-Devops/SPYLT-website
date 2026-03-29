@@ -16,7 +16,7 @@ useGSAP(() => {
         start: "-16% top",
         end: "200vh top",
         scrub: 0.8,
-        markers: true,
+        // markers: true,
         pin: true
       }
     });
