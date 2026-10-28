@@ -7,52 +7,104 @@ const TestimonialSection = () => {
   const vdRef = useRef([]);
 
   useGSAP(() => {
-    gsap.set(".testimonials-section", {
-      marginTop: "-65vh",
-    });
+    const mm = gsap.matchMedia();
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".testimonials-section",
-        start: "top bottom",
-        end: "200% top",
-        scrub: true,
-      },
-    });
+    mm.add("(min-width: 1025px)", () => {
+      gsap.set(".testimonials-section", {
+        marginTop: "-65vh",
+      });
 
-    tl.to(".testimonials-section .first-title", {
-      xPercent: 70,
-    })
-      .to(
-        ".testimonials-section .sec-title",
-        {
-          xPercent: 25,
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".testimonials-section",
+          start: "top bottom",
+          end: "200% top",
+          scrub: true,
         },
-        "<" // this is overlapping parametere for one by one animation 
-      )
-      .to(
-        ".testimonials-section .third-title",
-        {
-          xPercent: -45,
+      });
+
+      tl.to(".testimonials-section .first-title", {
+        xPercent: 70,
+      })
+        .to(
+          ".testimonials-section .sec-title",
+          {
+            xPercent: 25,
+          },
+          "<" // this is overlapping parametere for one by one animation 
+        )
+        .to(
+          ".testimonials-section .third-title",
+          {
+            xPercent: -45,
+          },
+          "<"  
+        );
+
+      const pinTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".testimonials-section",
+          start: "10% top",
+          end: "200% top",
+          scrub: 1.5,
+          pin: true,
         },
-        "<"  
-      );
+      });
 
-    const pinTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".testimonials-section",
-        start: "10% top",
-        end: "200% top",
-        scrub: 1.5,
-        pin: true,
-      },
+      pinTl.from(".vd-card", {
+        yPercent: 150,
+        stagger: 0.2,
+        ease: "power1.inOut",
+      });
     });
 
-    pinTl.from(".vd-card", {
-      yPercent: 150,
-      stagger: 0.2,
-      ease: "power1.inOut",
+    mm.add("(max-width: 1024px)", () => {
+      gsap.set(".testimonials-section", {
+        marginTop: "0vh",
+      });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".testimonials-section",
+          start: "top 85%",
+          end: "bottom 20%",
+          scrub: true,
+        },
+      });
+
+      tl.to(".testimonials-section .first-title", {
+        xPercent: 15,
+      })
+        .to(
+          ".testimonials-section .sec-title",
+          {
+            xPercent: 8,
+          },
+          "<"
+        )
+        .to(
+          ".testimonials-section .third-title",
+          {
+            xPercent: -12,
+          },
+          "<"
+        );
+
+      gsap.from(".vd-card", {
+        y: 60,
+        opacity: 0,
+        stagger: 0.15,
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: ".pin-box",
+          start: "top 85%",
+          end: "bottom 60%",
+          scrub: true,
+        },
+      });
     });
+
+    return () => mm.revert();
   });
 
   const handlePlay = (index) => {

@@ -48,7 +48,7 @@ const FooterSection = () => {
         </div>
 
         <div className="mt-40 md:px-10 px-5 flex gap-10 md:flex-row flex-col justify-between text-milk font-paragraph md:text-lg font-medium">
-          <div className="flex items-center md:gap-16 gap-5">
+          <div className="flex md:flex-row flex-col items-start md:items-center md:gap-16 gap-5">
             <div>
               <p>SPYLT Flavors</p>
             </div>
@@ -85,10 +85,10 @@ const FooterSection = () => {
 
         <div className="copyright-box">
           {/* The final row with copyright and legal links. */}
-          <p>Copyright © 2025 Spylt - All Rights Reserved</p>
+          <p>Copyright (c) 2025 Spylt - All Rights Reserved</p>
           <div className="flex items-center gap-7">
             <p>Privacy Policy</p>
-            <p>Terms of Sеrvice</p>
+            <p>Terms of Service</p>
           </div>
         </div>
       </div>

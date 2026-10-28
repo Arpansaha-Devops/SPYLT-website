@@ -100,7 +100,7 @@ const MessageSection = () => {
             <div className="max-w-md px-10 flex-center overflow-hidden">
               <p>
                 Rev up your rebel spirit and feed the adventure of life with
-                SPYLT, where you’re one chug away from epic nostalgia and
+                SPYLT, where you're one chug away from epic nostalgia and
                 fearless fun.
               </p>
             </div>

@@ -294,3 +294,61 @@ body::-webkit-scrollbar {
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 1024px) {
+  .testimonials-section {
+    height: auto;
+    min-height: 100dvh;
+    padding-bottom: 10vh;
+  }
+
+  .testimonials-section > .absolute {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 8vw;
+    padding-bottom: 2vw;
+  }
+
+  .testimonials-section h1 {
+    font-size: clamp(2.6rem, 14vw, 6.5rem);
+    line-height: 0.95;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .testimonials-section .pin-box {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    padding-left: 0;
+    padding-inline-start: 0;
+    margin-top: 2.5rem;
+    gap: 1.75rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonials-section .pin-box .vd-card {
+    position: relative;
+    margin-left: 0;
+    width: min(85vw, 26rem);
+    border-radius: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section .pin-box {
+    margin-top: 2rem;
+    gap: 1.25rem;
+  }
+
+  .testimonials-section .pin-box .vd-card {
+    width: min(90vw, 24rem);
+  }
+
+  .testimonials-section .vd-card {
+    --tw-translate-x: 0px;
+    --tw-translate-y: 0px;
+  }
+}
